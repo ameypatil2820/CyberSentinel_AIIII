@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  database:
+    image: mongo:latest
+    container_name: cybersentinel_db
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./Backend
+    container_name: cybersentinel_backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://database:27017/cybersentinel_db
+      - NODE_ENV=production
+      - JWT_SECRET=cybersentinel_jwt_secret_key_123_abc_xyz
+      - JWT_EXPIRE=30d
+    depends_on:
+      - database
+
+  frontend:
+    build: ./Frontend
+    container_name: cybersentinel_frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:

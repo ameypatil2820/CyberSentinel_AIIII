@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cyan: #00f0ff;
+  --color-brand-blue: #0052ff;
+  --color-brand-purple: #b500ff;
+  --color-brand-dark: #0a0a0f;
+  --color-brand-darker: #050507;
+  --color-brand-card: rgba(15, 23, 42, 0.6);
+  --color-brand-text: #e2e8f0;
+}
+
+@layer utilities {
+  .bg-grid-white {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+  .bg-grid-white-fade {
+    mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+  }
+  .blob-animate {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@layer base {
+  html, body {
+    background-color: var(--color-brand-darker);
+    color: var(--color-brand-text);
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-brand-card backdrop-blur-md border border-slate-800 rounded-xl shadow-lg;
+  }
+  
+  .glass-input {
+    @apply bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2 text-brand-text focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-blue hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2;
+  }
+  
+  .btn-cyan {
+    @apply bg-brand-cyan hover:bg-cyan-400 text-slate-900 font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2;
+  }
+
+  .btn-outline {
+    @apply border border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-brand-text font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2;
+  }
+}
