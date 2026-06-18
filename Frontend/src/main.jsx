@@ -1,6 +1,6 @@
 /*
- Author: Balaji Patil
- GitHub: github.com/BalajiPatil1207
+ Author: Amey Patil
+ GitHub: github.com/ameypatil2820
 */
 import { createRoot } from 'react-dom/client'
 import './index.css'
