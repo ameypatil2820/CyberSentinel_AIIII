@@ -77,7 +77,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to Database
-connectDB();
+await connectDB();
 
 // Serve uploads statically
 app.use("/uploads", express.static(path.join(__dirname, "upload")));
