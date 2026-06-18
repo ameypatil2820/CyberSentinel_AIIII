@@ -406,15 +406,15 @@ export function Landing() {
               <ul className="space-y-4 text-sm text-slate-400">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-brand-cyan shrink-0" />
-                  <span>Pune, Maharashtra, India</span>
+                  <span>Kolhapur, Maharashtra, India</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-brand-cyan shrink-0" />
-                  <a href="mailto:balajipatil3252@gmail.com" className="hover:text-white transition-colors cursor-pointer">balajipatil3252@gmail.com</a>
+                  <a href="mailto:ameypatil2820@gmail.com" className="hover:text-white transition-colors cursor-pointer">ameypatil2820@gmail.com</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-brand-cyan shrink-0" />
-                  <a href="tel:+917498586267" className="hover:text-white transition-colors cursor-pointer">+91 7498586267</a>
+                  <a href="tel:+919730782820" className="hover:text-white transition-colors cursor-pointer">+91 9730782820</a>
                 </li>
               </ul>
             </div>
@@ -447,17 +447,17 @@ export function Landing() {
               className="absolute bottom-16 right-0 mb-2 w-48 bg-slate-800 border border-slate-700 rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col origin-bottom-right"
             >
               <a
-                href="tel:+917498586267"
+                href="tel:+919730782820"
                 className="flex items-center gap-3 px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700/50 text-white"
               >
                 <Phone className="w-4 h-4 text-brand-cyan" />
                 <div className="flex flex-col">
                   <span className="font-medium text-sm">Call Now</span>
-                  <span className="text-xs text-slate-400">+91 7498586267</span>
+                  <span className="text-xs text-slate-400">+91 9730782820</span>
                 </div>
               </a>
               <a
-                href="https://wa.me/917498586267"
+                href="https://wa.me/919730782820"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 px-4 py-3 hover:bg-slate-700 transition-colors text-white"
